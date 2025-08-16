@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ 'Editar Música' if musica else 'Adicionar Música' }}</h2>
+
+<form method="POST">
+    <label for="titulo">Título:</label>
+    <input type="text" name="titulo" id="titulo" value="{{ musica.get_titulo() if musica else '' }}" required>
+
+    <label for="artista">Artista:</label>
+    <input type="text" name="artista" id="artista" value="{{ musica.get_artista() if musica else '' }}" required>
+
+    <label for="album">Álbum:</label>
+    <input type="text" name="album" id="album" value="{{ musica.get_album() if musica else '' }}">
+
+    <label for="ano_lancamento">Ano de Lançamento:</label>
+    <input type="number" name="ano_lancamento" id="ano_lancamento" value="{{ musica.get_ano_lancamento() if musica else '' }}" required>
+
+    <button type="submit">Salvar</button>
+
+</form>
+
+    <a href="{{ url_for('listar_musicas')}}">Cancelar</a>
+{% endblock %}

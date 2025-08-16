@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ 'Editar Playlist' if playlist else 'Adicionar Playlist' }}</h2>
+
+<form method="POST">
+    <label>Nome:</label>
+    <input type="text" name="nome" value="{{ playlist.get_nome() if playlist else '' }}" required>
+
+    <label>Descrição:</label>
+    <textarea name="descricao">{{ playlist.get_descricao() if playlist else '' }}</textarea>
+
+
+    <label>Músicas:</label><br>
+    {% for musica in musicas %}
+        <input type="checkbox" name="musicas" value="{{ musica.id }}"
+            {% if musica.id|string in musicas_selecionadas|map('string') %}checked{% endif %}>
+        {{ musica.titulo }} - {{ musica.artista }} <br>
+    {% endfor %}
+
+    <button type="submit">Salvar</button>
+
+</form>
+    <a href="{{ url_for('listar_playlists')}}">Cancelar</a>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Lista de Músicas</h2>
+
+<a href="{{ url_for('criar_musica') }}">Adicionar Nova Música</a>
+
+<table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Artista</th>
+            <th>Álbum</th>
+            <th>Ano</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for musica in musicas %}
+        <tr>
+            <td>{{ musica["titulo"] }}</td>
+            <td>{{ musica["artista"] }}</td>
+            <td>{{ musica["album"] }}</td>
+            <td>{{ musica["ano_lancamento"] }}</td>
+            <td>
+                <a href="{{ url_for('editar_musica', id=musica['id']) }}">Editar</a> |
+                <a href="{{ url_for('deletar_musica', id=musica['id']) }}"
+                    onclick="return confirm('Tem certeza que deseja excluir esta música?')">Excluir</a>
+            </td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="6">Nenhuma música cadastrada.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<p>
+    <a href="{{ url_for('listar_playlists')}}">Ver Playlists</a>
+</p>
+{% endblock %}
