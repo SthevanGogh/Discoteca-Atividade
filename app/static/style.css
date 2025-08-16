@@ -1,0 +1,176 @@
+/* Fundo escuro com vibe de pista */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top left, #0a0a0a, #1a1a1a 80%);
+    color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Títulos com efeito neon */
+h1, h2 {
+    text-align: center;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff33ff;
+    margin-bottom: 20px;
+}
+
+/* Links principais */
+a {
+    color: #00ffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+a:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff;
+}
+
+/* Tabela com estilo neon */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(20, 20, 20, 0.9);
+    border: 2px solid #ff00ff;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th {
+    background: #111;
+    color: #00ffff;
+    padding: 12px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ff00ff;
+}
+
+table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+table tr:hover {
+    background: rgba(255, 0, 255, 0.2);
+    transition: 0.3s;
+}
+
+/* Botões glow */
+button, .btn {
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    border: none;
+    padding: 10px 20px;
+    color: #111;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+}
+
+button:hover, .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff00ff, 0 0 30px #00ffff;
+}
+
+/* Container do form */
+form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(20, 20, 20, 0.9);
+    border-radius: 15px;
+    border: 2px solid #ff00ff;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+}
+
+/* Labels */
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff;
+}
+
+/* Inputs e Textarea */
+form input[type="text"],
+form input[type="number"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #111;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+    box-shadow: inset 0 0 5px #333;
+}
+
+/* Foco nos inputs (efeito neon) */
+form input:focus,
+form textarea:focus {
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+    border: 1px solid #00ffff;
+}
+
+/* Checkbox estilizado */
+form input[type="checkbox"] {
+    appearance: none; /* remove estilo padrão */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ff00ff;
+    border-radius: 5px;
+    background: #111;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* Glow ao passar o mouse */
+form input[type="checkbox"]:hover {
+    box-shadow: 0 0 10px #00ffff;
+}
+
+/* Quando marcado */
+form input[type="checkbox"]:checked {
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+    border: none;
+}
+
+/* Checkmark estilizado */
+form input[type="checkbox"]:checked::after {
+    content: "✔";
+    color: #111;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 4px;
+    font-weight: bold;
+}
+
+/* Botão do form */
+form button {
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    border: none;
+    padding: 12px 20px;
+    color: #111;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+}
+
+form button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff00ff, 0 0 30px #00ffff;
+}
